@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using TechJobs.Models;
+using TechJobs.ViewModels;
 
 namespace TechJobs.ViewModels
 {
-    public class JobFieldsViewModel
+    public class JobFieldsViewModel : BaseViewModel
     {
         // TODO #7.2 - Extract members common to SearchJobsViewModel
         // to BaseViewModel
@@ -13,10 +14,7 @@ namespace TechJobs.ViewModels
         public JobFieldType Column { get; set; }
 
         // All fields in the given column
-        public IEnumerable<JobField> Fields { get; set; }
-
-        // All columns, for display
-        public List<JobFieldType> Columns { get; set; }
+        public IEnumerable<JobField> Fields { get; set; }        
 
         // View title
         public string Title { get; set; } = "";
